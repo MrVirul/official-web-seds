@@ -1,4 +1,5 @@
-import astronomyImg from "../assets/astronomy.png";
+import astronomyImg from "../../assets/astronomy.png";
+import Button from "../ui/Button";
 
 const HeroSection = () => {
   return (
@@ -17,9 +18,7 @@ const HeroSection = () => {
             <br className="hidden sm:block" />
             Development of Space
           </p>
-          <button className="mt-2 md:mt-4 px-8 py-3 text-sm md:text-base rounded-full border border-white/30 text-white font-medium hover:bg-white/10 transition duration-300">
-            JOIN US
-          </button>
+          <Button className="mt-2 md:mt-4">JOIN US</Button>
         </div>
 
         {/* Astronaut Image - Hidden on mobile, shown on tablet as background, shown on desktop side-by-side */}

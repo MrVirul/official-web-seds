@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import HeroSection from "../components/HeroSection";
+import Landing from "../components/landing";
 
 const GlobalStars = () => {
   const stars = useMemo(
@@ -42,7 +42,7 @@ const Index = () => {
     <main className="relative min-h-screen">
       <GlobalStars />
       <div className="relative z-10 flex flex-col w-full">
-        <HeroSection />
+        <Landing />
       </div>
     </main>
   );
