@@ -1,73 +1,39 @@
-import heroBg from "@/assets/hero-bg.png";
-import { motion } from "framer-motion";
-
-const Stars = () => {
-  const stars = Array.from({ length: 50 }, (_, i) => ({
-    id: i,
-    left: `${Math.random() * 100}%`,
-    top: `${Math.random() * 100}%`,
-    delay: `${Math.random() * 5}s`,
-    duration: `${2 + Math.random() * 4}s`,
-  }));
-
-  return (
-    <>
-      {stars.map((star) => (
-        <div
-          key={star.id}
-          className="star"
-          style={{
-            left: star.left,
-            top: star.top,
-            "--delay": star.delay,
-            "--duration": star.duration,
-          } as React.CSSProperties}
-        />
-      ))}
-    </>
-  );
-};
+import astronomyImg from "../assets/astronomy.png";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${heroBg})` }} />
-      <div className="absolute inset-0 bg-gradient-to-l from-background/80 via-background/40 to-transparent" />
-      <Stars />
-
-      <div className="relative z-10 container mx-auto px-4 pt-20 flex justify-center md:justify-end">
-        <div className="text-center md:text-right max-w-2xl">
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-extralight tracking-[0.15em] sm:tracking-[0.3em] text-foreground text-glow mb-4 sm:mb-6 uppercase"
+    <div className="relative min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-20 pt-24 pb-12 overflow-hidden">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        {/* Text Content */}
+        <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:gap-6 z-20 md:col-span-12 lg:col-span-8">
+          <h1
+            className="text-glow font-light tracking-wider text-white whitespace-nowrap leading-none w-full"
+            style={{ fontSize: "clamp(2.5rem, 8vw, 7.5rem)" }}
           >
             SEDS SLIIT
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-base sm:text-lg md:text-xl text-muted-foreground tracking-[0.1em] sm:tracking-[0.15em] font-light mb-8 sm:mb-10 leading-relaxed"
-          >
-            Students for the Exploration and<br />Development of Space
-          </motion.p>
-          <motion.a
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            href="#about"
-            className="group relative inline-block rounded-full px-8 sm:px-10 py-3 text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] font-light text-foreground overflow-hidden transition-all duration-300"
-          >
-            <span className="absolute inset-0 rounded-full border border-muted-foreground/40 group-hover:border-primary/60 transition-colors duration-300" />
-            <span className="absolute w-2 h-2 bg-primary rounded-full shadow-[0_0_8px_2px_hsl(var(--primary))] animate-[orbit_4s_linear_infinite]" style={{ top: '-4px', left: '50%', transformOrigin: '0 calc(50% + 22px)' }} />
-            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-[shimmer_3s_ease-in-out_infinite]" />
-            <span className="relative z-10">Join Us</span>
-          </motion.a>
+          </h1>
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-lg leading-relaxed font-light">
+            Student for the Exploration and
+            <br className="hidden sm:block" />
+            Development of Space
+          </p>
+          <button className="mt-2 md:mt-4 px-8 py-3 text-sm md:text-base rounded-full border border-white/30 text-white font-medium hover:bg-white/10 transition duration-300">
+            JOIN US
+          </button>
+        </div>
+
+        {/* Astronaut Image - Hidden on mobile, shown on tablet as background, shown on desktop side-by-side */}
+        <div className="relative z-10 hidden md:flex md:col-span-12 lg:col-span-4 justify-center lg:justify-end items-center mt-12 lg:mt-0">
+          <div className="md:absolute lg:relative md:opacity-20 lg:opacity-80 md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 lg:translate-x-0 lg:translate-y-0 lg:top-auto lg:left-auto lg:-ml-40 lg:-mr-20 w-[900px] lg:min-w-[800px] lg:w-[220%] max-w-[1600px] pointer-events-none">
+            <img
+              src={astronomyImg}
+              alt="Astronaut Background"
+              className="w-full h-auto object-contain scale-110 lg:scale-125 origin-right"
+            />
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
