@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logo from "../assets/seds-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,9 +10,9 @@ const Navbar = () => {
     <header className="absolute top-0 left-0 w-full z-50 box-border px-4 md:px-8 py-6 md:py-8 flex justify-between items-center">
       <Link to="/" className="flex items-center z-50">
         <img
-          src="/favicon.ico"
+          src={logo}
           alt="SEDS Logo"
-          className="w-[50px] md:w-[70px] rounded-full transition-transform hover:scale-105"
+          className="w-[50px] md:w-[70px] h-auto rounded-full transition-transform hover:scale-105 object-contain"
         />
       </Link>
 
