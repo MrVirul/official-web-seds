@@ -1,11 +1,5 @@
-import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import BlogsSection from "@/components/BlogsSection";
-import EventsSection from "@/components/EventsSection";
-import BoardSection from "@/components/BoardSection";
-import ContactSection from "@/components/ContactSection";
 import { useMemo } from "react";
+import Landing from "../components/landing";
 
 const GlobalStars = () => {
   const stars = useMemo(
@@ -19,7 +13,7 @@ const GlobalStars = () => {
         size: Math.random() > 0.85 ? 3 : Math.random() > 0.5 ? 2 : 1,
         opacity: 0.15 + Math.random() * 0.35,
       })),
-    []
+    [],
   );
 
   return (
@@ -45,16 +39,10 @@ const GlobalStars = () => {
 
 const Index = () => {
   return (
-    <main className="relative">
+    <main className="relative min-h-screen">
       <GlobalStars />
-      <div className="relative z-10">
-        <Navbar />
-        <HeroSection />
-        <AboutSection />
-        <BlogsSection />
-        <EventsSection />
-        <BoardSection />
-        <ContactSection />
+      <div className="relative z-10 flex flex-col w-full">
+        <Landing />
       </div>
     </main>
   );

@@ -54,11 +54,79 @@
 
   body {
     @apply bg-background text-foreground;
+    margin: 0;
+    background: #090709;
+    font-family: 'Rajdhani', sans-serif;
+    color: white;
+    overflow-x: hidden;
   }
 
   html {
     scroll-behavior: smooth;
   }
+}
+
+/* Background Glow */
+.bg-glow::before,
+.bg-glow::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(180px);
+  z-index: -1;
+}
+
+.bg-glow::before {
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(
+    180deg,
+    rgba(224, 182, 228, 0.4),
+    rgba(112, 91, 114, 0.4)
+  );
+  top: 20%;
+  right: -200px;
+}
+
+.bg-glow::after {
+  width: 800px;
+  height: 800px;
+  background: linear-gradient(
+    180deg,
+    rgba(224, 182, 228, 0.3),
+    rgba(127, 106, 129, 0.3)
+  );
+  bottom: -200px;
+  left: -200px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 40px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #d8a6ff;
+}
+
+.logo {
+  width: 70px;
+  border-radius: 50%;
 }
 
 /* Glow text effect */
