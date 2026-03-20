@@ -24,14 +24,14 @@ const Footer = () => {
               />
             </Link>
             <div className="flex flex-col gap-4">
-              <p className="text-white font-semibold text-[15px] leading-[1.3] tracking-normal">
+              <p className="text-[#d4d0d8] font-semibold text-[15px] leading-[1.3] tracking-normal">
                 Welcome to SEDS SLIIT a student-led space organization<br />
                 at Sri Lanka institute of Information Technology,<br />
                 empovering students to explore,build and innovate<br />
                 beyond the classroom
               </p>
               <div className="mt-20">
-                <h4 className="text-white font-bold text-2xl tracking-tight mb-5">
+                <h4 className="text-[#e5e1e8] font-normal text-2xl tracking-tight mb-5">
                   Follow Us on Socials!
                 </h4>
                 <div className="flex gap-6 items-center">
@@ -74,14 +74,14 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="lg:pl-12">
-            <h4 className="text-white font-bold text-2xl mb-8 tracking-tight">
+            <h4 className="text-[#e5e1e8] font-normal text-2xl mb-8 tracking-tight">
               Links
             </h4>
             <ul className="flex flex-col gap-2.5 mt-1">
               <li className="h-[19px] w-[35px]">
                 <Link
                   to="/"
-                  className="text-white hover:text-white font-normal text-base transition-colors"
+                  className="text-[#b8b4be] hover:text-[#e5e1e8] font-normal text-base transition-colors"
                 >
                   Home
                 </Link>
@@ -89,7 +89,7 @@ const Footer = () => {
               <li className="h-[19px] w-[36px]">
                 <Link
                   to="/about"
-                  className="text-white hover:text-white font-normal text-base transition-colors"
+                  className="text-[#b8b4be] hover:text-[#e5e1e8] font-normal text-base transition-colors"
                 >
                   About
                 </Link>
@@ -97,7 +97,7 @@ const Footer = () => {
               <li className="h-[19px] w-[33px]">
                 <Link
                   to="/blogs"
-                  className="text-white hover:text-white font-normal text-base transition-colors"
+                  className="text-[#b8b4be] hover:text-[#e5e1e8] font-normal text-base transition-colors"
                 >
                   Blogs
                 </Link>
@@ -105,7 +105,7 @@ const Footer = () => {
               <li className="h-[19px] w-[41px]">
                 <Link
                   to="/events"
-                  className="text-white hover:text-white font-normal text-base transition-colors"
+                  className="text-[#b8b4be] hover:text-[#e5e1e8] font-normal text-base transition-colors"
                 >
                   Events
                 </Link>
@@ -113,7 +113,7 @@ const Footer = () => {
               <li className="h-[19px] w-[36px]">
                 <Link
                   to="/board"
-                  className="text-white hover:text-white font-normal text-base transition-colors"
+                  className="text-[#b8b4be] hover:text-[#e5e1e8] font-normal text-base transition-colors"
                 >
                   Board
                 </Link>
@@ -121,7 +121,7 @@ const Footer = () => {
               <li className="h-[19px] w-[48px]">
                 <Link
                   to="/contact"
-                  className="text-white hover:text-white font-normal text-base transition-colors"
+                  className="text-[#b8b4be] hover:text-[#e5e1e8] font-normal text-base transition-colors"
                 >
                   Contact
                 </Link>
@@ -131,10 +131,10 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-bold text-2xl mb-8 tracking-tight">
+            <h4 className="text-[#e5e1e8] font-normal text-2xl mb-8 tracking-tight">
               Contact
             </h4>
-            <ul className="flex flex-col gap-1 text-white/70 font-light text-[15px] leading-snug">
+            <ul className="flex flex-col gap-1 text-[#b8b4be] font-light text-[15px] leading-snug">
               <li>SLIIT Malabe Campus</li>
               <li>New Kandy Road</li>
               <li>Malabe, Sri Lanka</li>
@@ -143,10 +143,10 @@ const Footer = () => {
 
           {/* Subscribe */}
           <div>
-            <h4 className="text-white font-bold text-2xl mb-8 tracking-tight">
+            <h4 className="text-[#e5e1e8] font-normal text-2xl mb-8 tracking-tight">
               Subscribe
             </h4>
-            <p className="text-white/70 font-light text-[15px] mb-6 leading-relaxed">
+            <p className="text-[#b8b4be] font-light text-[15px] mb-6 leading-relaxed">
               Don't forget to subscribe to our news letters, enter your e-mail here.
             </p>
             <form
