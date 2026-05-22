@@ -91,11 +91,11 @@ const Divisions = () => {
     if (gridRef.current) {
       gsap.fromTo(
         gridRef.current,
-        { 
-          rotationX: 65, 
-          z: -300, 
+        {
+          rotationX: 65,
+          z: -300,
           y: 100,
-          opacity: 0.25 
+          opacity: 0.25
         },
         {
           rotationX: 45,
@@ -148,13 +148,13 @@ const Divisions = () => {
 
   return (
     <section className="divisions-section relative z-20 py-16 md:py-28 px-4 md:px-12 lg:px-20 bg-transparent flex flex-col items-center overflow-hidden">
-      
+
       {/* Cyber space grid matrix background */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none z-0 flex justify-center items-end"
         style={{ perspective: '800px', transformStyle: 'preserve-3d' }}
       >
-        <div 
+        <div
           ref={gridRef}
           className="w-[200%] h-[150%] opacity-20"
           style={{
@@ -169,13 +169,13 @@ const Divisions = () => {
       </div>
 
       <div className="container mx-auto max-w-6xl flex flex-col items-center mb-10 md:mb-20 relative z-10">
-        <h2 
+        <h2
           ref={titleRef}
           className="text-4xl sm:text-5xl md:text-6xl font-light tracking-wider text-white mb-8 select-none text-center"
         >
           OUR DIVISIONS
         </h2>
-        <p 
+        <p
           ref={textRef}
           className="text-gray-300 text-lg md:text-xl md:leading-relaxed font-light max-w-4xl text-center select-none"
         >
@@ -197,17 +197,6 @@ const Divisions = () => {
                 height: '420px',
               }}
             >
-              {/* Neon Path Drawing Overlay */}
-              <div className="absolute inset-0 rounded-[2rem] border border-[#E0B6E4]/0 group-hover:border-[#E0B6E4]/25 transition-all duration-500 pointer-events-none z-20">
-                <svg className="absolute inset-0 w-full h-full" fill="none">
-                  <rect
-                    x="1" y="1" width="99%" height="99%" rx="38" ry="38"
-                    stroke="url(#neonBorderGradient)"
-                    strokeWidth="2"
-                    className="neon-draw-rect"
-                  />
-                </svg>
-              </div>
 
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-transparent to-black/80 pointer-events-none z-10" />
@@ -245,21 +234,11 @@ const Divisions = () => {
                   backgroundImage: `url(${division.image})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  minHeight: '420px',
-                  height: 'clamp(420px, 40vw, 520px)',
+                  minHeight: '350px',
+                  height: 'clamp(350px, 40vw, 320px)',
                 }}
               >
-                {/* Neon Path Drawing Overlay */}
-                <div className="absolute inset-0 rounded-[2.5rem] border border-[#E0B6E4]/0 group-hover:border-[#E0B6E4]/25 transition-all duration-500 pointer-events-none z-20">
-                  <svg className="absolute inset-0 w-full h-full" fill="none">
-                    <rect
-                      x="1" y="1" width="99%" height="99%" rx="38" ry="38"
-                      stroke="url(#neonBorderGradient)"
-                      strokeWidth="2"
-                      className="neon-draw-rect"
-                    />
-                  </svg>
-                </div>
+
 
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-transparent to-black/80 pointer-events-none group-hover:from-black/35 group-hover:to-black/70 transition-colors duration-500 z-10" />

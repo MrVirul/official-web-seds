@@ -20,7 +20,7 @@ const Hands3D = () => {
     target: containerRef,
     // Mobile: animation completes as you scroll PAST the section ("end 30%" = bottom of section at 30% viewport height)
     // Desktop: animation completes when section center hits viewport center
-    offset: isMobile ? ["start 90%", "end 1%"] : ["start 50%", "center center"]
+    offset: isMobile ? ["start 90%", "end 1%"] : ["start 60%", "center center"]
   });
 
   // Add smooth spring physics to scroll progress for fluid inertia and lag
@@ -59,7 +59,7 @@ const Hands3D = () => {
       {/* Left Hand (Human) - Large scale, slides from the left margin on scroll */}
       <motion.div
         style={{ x: leftHandX }}
-        className="absolute left-[-2%] sm:left-[-3%] md:left-[-4%] lg:left-[-5%] top-[8%] sm:top-[0%] -translate-y-1/2 w-[75%] sm:w-[70%] md:w-[65%] lg:w-[60%] max-w-[1000px] aspect-square flex items-center justify-center pointer-events-none z-10"
+        className="absolute left-[-1%] sm:left-[-3%] md:left-[-4%] lg:left-[-5%] top-[8%] sm:top-[0%] -translate-y-1/2 w-[75%] sm:w-[70%] md:w-[65%] lg:w-[60%] max-w-[1000px] aspect-square flex items-center justify-center pointer-events-none z-10"
       >
         <img
           src="/lefttransparent.png"
@@ -71,7 +71,7 @@ const Hands3D = () => {
       {/* Right Hand (Robotic) - Large scale, slides from the right margin on scroll */}
       <motion.div
         style={{ x: rightHandX, top: isMobile ? `${rightHandTop + 40}px` : `${rightHandTop}px` }}
-        className="absolute right-[-2%] sm:right-[-3%] md:right-[-4%] lg:right-[-5%] -translate-y-1/2 w-[75%] sm:w-[70%] md:w-[65%] lg:w-[60%] max-w-[1000px] aspect-square flex items-center justify-center pointer-events-none z-10"
+        className="absolute right-[-1%] sm:right-[-3%] md:right-[-4%] lg:right-[-5%] -translate-y-1/2 w-[75%] sm:w-[70%] md:w-[65%] lg:w-[60%] max-w-[1000px] aspect-square flex items-center justify-center pointer-events-none z-10"
       >
         <img
           src="/right.png"
